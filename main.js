@@ -1,6 +1,7 @@
 import './style.css'
 import * as THREE from "three";
 import { TetrahedronGeometry, TubeGeometry, WebGLRenderer } from 'three';
+import bg from "./bg/bg.jpg";
 
 //キャンバス
 const canvas = document.querySelector('.webgl');
@@ -17,7 +18,7 @@ const scene = new THREE.Scene();
 
 //背景を設定
 const textureLoder = new THREE.TextureLoader();
-const bgtexture = textureLoder.load("bg/bg.jpg");
+const bgtexture = textureLoder.load(bg);
 scene.background = bgtexture;
 
 /**
